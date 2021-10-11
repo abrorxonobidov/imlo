@@ -4,8 +4,7 @@ import refreshIcon from './img/icon_2.png';
 import {Component} from 'react';
 import word from './words.json';
 import Chart from "./Chart";
-import audioCorrect from './audio/correct.mp3';
-import audioIncorrect from './audio/incorrect.mp3';
+import {correct, incorrect} from './audio2';
 
 class App extends Component {
 
@@ -74,7 +73,7 @@ class App extends Component {
     }
 
     playAudio = (a) => {
-        (new Audio(a === 'correct' ? audioCorrect : audioIncorrect))
+        (new Audio(a === 'correct' ? correct : incorrect))
             .play()
             .then(r => console.log(r));
     }
