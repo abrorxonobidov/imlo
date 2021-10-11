@@ -4,6 +4,8 @@ import refreshIcon from './img/icon_2.png';
 import {Component} from 'react';
 import word from './words.json';
 import Chart from "./Chart";
+import audioCorrect from './audio/correct.mp3';
+import audioIncorrect from './audio/incorrect.mp3';
 
 class App extends Component {
 
@@ -64,12 +66,18 @@ class App extends Component {
         let stat = JSON.parse(localStorage.getItem('stat'));
         stat[e]++;
         localStorage.setItem('stat', JSON.stringify(stat));
+        this.playAudio(e);
     }
 
     toggleStatTable = (showStat = true) => {
         this.setState({showStat: showStat})
     }
 
+    playAudio = (a) => {
+        (new Audio(a === 'correct' ? audioCorrect : audioIncorrect))
+            .play()
+            .then(r => console.log(r));
+    }
 
     render() {
         return (
