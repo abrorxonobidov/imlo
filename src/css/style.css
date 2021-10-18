@@ -17,7 +17,7 @@ html, body{
 }
 @font-face{
     font-family: "SegoeUIRegular";
-    src: url("../fonts/SegoeUIRegular.woff") format("woff");
+    src: url("SegoeUIRegular.woff") format("woff");
     font-style: normal;
     font-weight: normal;
 }
@@ -29,7 +29,7 @@ html, body{
 }
 .wrapper:before{
     content: "";
-    background: url("../img/background.jpg") center center no-repeat;
+    background: url("background.jpg") center center no-repeat;
     background-size: cover;
     width: 100%;
     height: 100vh;
@@ -75,9 +75,15 @@ html, body{
     color: #fff;
     line-height: 1.1;
     text-transform: uppercase;
-    margin: 0 auto 50px auto;
-    padding: 20px 0 20px 220px;
+    margin: 0 auto;
+    padding: 0 0 0 220px;
     text-align: left;
+}
+.hint {
+    font-size: 40px;
+    font-family: "SegoeUIRegular", serif;
+    color: rgb(255, 255, 255);
+    margin-bottom: 40px;
 }
 .main_title span{
     width: 200px;
@@ -98,13 +104,13 @@ html, body{
     position: relative;
     z-index: 3;
     background-color: #021764;
-    box-shadow: none;
+    box-shadow: 0 0 20px 13px #999999;
     outline: none;
     display: inline-block;
     width: 730px;
     height: 380px;
     border: 21px solid #fff;
-    border-radius: 15px;
+    border-radius: 40px;
     cursor: pointer;
     font-family: "SegoeUIRegular", serif;
     font-size: 60px;

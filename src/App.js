@@ -1,10 +1,10 @@
 import './css/style.css';
-import statIcon from './img/icon_1.png';
-import refreshIcon from './img/icon_2.png';
+import {IconRefresh} from './icons';
+import {IconStat} from './icons';
 import {Component} from 'react';
 import word from './words.json';
 import Chart from "./Chart";
-import {correct, incorrect} from './audio2';
+import {correct, incorrect} from './audio';
 
 class App extends Component {
 
@@ -85,11 +85,13 @@ class App extends Component {
                 <div className="bg_box">
                     <div className="main_title">
                         <span>
-                            <i>1</i>
+                            <i>21</i>
                             oktyabr
                         </span>
-                        O‘zbek tiliga davlat tili maqomi berilgan kun.
+                        <p>O‘zbek tiliga davlat tili maqomi berilgan kun</p>
+                        <br/>
                     </div>
+                    <p className="hint">To‘g‘ri so‘zni tanlang</p>
                     {this.state.current ? (this.state.sort === 0 ?
                             <>
                                 <MyButton click={() => this.clickAnswer('correct')}
@@ -112,9 +114,9 @@ class App extends Component {
                     }
                     <ul className="left_right_list">
                         {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
-                        <li><a onClick={() => this.toggleStatTable(true)}><img src={statIcon} alt=""/></a></li>
+                        <li><a onClick={() => this.toggleStatTable(true)}><img src={IconStat} alt=""/></a></li>
                         {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
-                        <li><a onClick={() => this.initWords()}><img src={refreshIcon} alt=""/></a></li>
+                        <li><a onClick={() => this.initWords()}><img src={IconRefresh} alt=""/></a></li>
                     </ul>
                 </div>
             </div>
