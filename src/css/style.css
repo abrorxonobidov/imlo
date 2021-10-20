@@ -171,7 +171,7 @@ html, body{
 }
 
 .stat-table p {
-    text-align: right;
+    text-align: left;
     position: absolute;
     top: 0;
     z-index: 5;

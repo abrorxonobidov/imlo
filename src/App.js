@@ -1,6 +1,5 @@
 import './css/style.css';
-import {IconRefresh} from './icons';
-import {IconStat} from './icons';
+import {IconRefresh, IconStat} from './icons';
 import {Component} from 'react';
 import word from './words.json';
 import Chart from "./Chart";
@@ -36,19 +35,19 @@ class App extends Component {
         let a = this.state.words.length <= 0 ? [...word] : this.state.words;
         a = this.shuffleWords(a);
         this.setState({
-                current: {
-                    correct: {
-                        text: a[0][0],
-                        cl: '',
-                        addClass: 'true',
-                    },
-                    incorrect: {
-                        text: a[0][1],
-                        cl: '',
-                        addClass: 'false',
-                    }
+            current: {
+                correct: {
+                    text: a[0][0],
+                    cl: '',
+                    addClass: 'true',
                 },
-            });
+                incorrect: {
+                    text: a[0][1],
+                    cl: '',
+                    addClass: 'false',
+                }
+            },
+        });
         a.shift();
         this.setState({
             words: a,
@@ -75,7 +74,7 @@ class App extends Component {
     playAudio = (a) => {
         (new Audio(a === 'correct' ? correct : incorrect))
             .play()
-            .then(r => console.log(r));
+            .then();
     }
 
     render() {
@@ -83,15 +82,7 @@ class App extends Component {
             <div className={this.state.checked ? 'wrapper wrapper_blue' : 'wrapper'}>
                 {this.state.showStat ? <Chart fnHide={() => this.toggleStatTable(false)}/> : ''}
                 <div className="bg_box">
-                    <div className="main_title">
-                        <span>
-                            <i>21</i>
-                            oktyabr
-                        </span>
-                        <p>O‘zbek tiliga davlat tili maqomi berilgan kun</p>
-                        <br/>
-                    </div>
-                    <p className="hint">To‘g‘ri so‘zni tanlang</p>
+                    <Label/>
                     {this.state.current ? (this.state.sort === 0 ?
                             <>
                                 <MyButton click={() => this.clickAnswer('correct')}
@@ -125,9 +116,7 @@ class App extends Component {
 }
 
 class MyButton extends Component {
-
     render() {
-
         return (
             <button name="button" className={'btn btn-default btn_link ' + this.props.cl}
                     onClick={this.props.click}>
@@ -135,6 +124,19 @@ class MyButton extends Component {
             </button>
         )
     }
+}
+
+const Label = () => {
+    return (
+        <>
+            <div className="main_title">
+                <span><i>21</i>oktabr</span>
+                <p>O‘zbek tiliga davlat tili maqomi berilgan kun</p>
+                <br/>
+            </div>
+            <p className="hint">To‘g‘ri so‘zni tanlang</p>
+        </>
+    )
 }
 
 export default App;
