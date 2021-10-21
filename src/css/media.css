@@ -1,0 +1,144 @@
+@media screen and (max-width: 1700px){
+    .btn_link{
+        width: 670px;
+        margin: 0 30px;
+    }
+}
+@media screen and (max-width: 1600px){
+    .main_title{
+        width: 66%;
+    }
+}
+@media screen and (max-width: 1500px){
+    .main_title{
+        width: 68%;
+    }
+    .btn_link{
+        width: 600px;
+        height: 320px;
+        margin: 0 25px;
+    }
+}
+@media screen and (max-width: 1400px){
+    .main_title{
+        width: 72%;
+    }
+}
+@media screen and (max-width: 1350px){
+    .main_title{
+        width: 75%;
+    }
+    .btn_link{
+        width: 500px;
+        height: 270px;
+    }
+}
+@media screen and (max-width: 1280px){
+    .main_title{
+        width: 68%;
+        font-size: 44px;
+    }
+    .main_title span i{
+        font-size: 80px;
+    }
+}
+@media screen and (max-width: 1199px){
+    .btn_link {
+        width: 440px;
+    }
+}
+@media screen and (max-width: 1024px){
+    .btn_link{
+        width: 420px;
+    }
+}
+@media screen and (max-width: 991px){
+    .main_title{
+        width: 78%;
+        font-size: 40px;
+    }
+    .main_title span{
+        font-size: 36px;
+    }
+    .main_title span i {
+        font-size: 72px;
+    }
+    .btn_link{
+        width: 350px;
+        height: 200px;
+        border: 10px solid #fff;
+        font-size: 40px;
+    }
+}
+@media screen and (max-width: 850px){
+    .main_title{
+        text-transform: none;
+        font-size: 36px;
+    }
+    .main_title span i{
+        font-size: 60px;
+    }
+    .main_title span{
+        font-size: 32px;
+    }
+    .btn_link{
+        width: 300px;
+        height: 170px;
+    }
+    .hint{
+        font-size: 34px;
+    }
+}
+@media screen and (max-width: 767px){
+    .main_title{
+        padding: 0 0 0 200px;
+    }
+    .btn_link{
+        width: 350px;
+        height: 180px;
+        margin-bottom: 60px;
+    }
+}
+@media screen and (max-width: 700px){
+    .main_title{
+        width: 100%;
+    }
+}
+@media screen and (max-width: 500px){
+    .btn_link{
+        width: 300px;
+        height: 150px;
+        font-size: 36px;
+        margin: 0 0 60px 0;
+    }
+    .main_title{
+        font-size: 30px;
+        padding: 0 0 0 140px;
+    }
+    .main_title span {
+        width: 140px;
+        font-size: 28px;
+    }
+    .main_title span i {
+        font-size: 50px;
+    }
+}
+@media screen and (max-width: 400px){
+    .main_title{
+        padding: 0;
+        text-align: center;
+        line-height: 1.3;
+    }
+    .main_title span{
+        position: relative;
+        top: 0;
+        left: 0;
+        font-weight: 600;
+    }
+    .main_title span i{
+        display: inline-block;
+    }
+    .btn_link{
+        width: 270px;
+    }
+}

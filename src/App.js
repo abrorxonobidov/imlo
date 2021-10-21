@@ -1,4 +1,5 @@
 import './css/style.css';
+import './css/media.css';
 import {IconRefresh, IconStat} from './icons';
 import {Component} from 'react';
 import word from './words.json';
